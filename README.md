@@ -21,3 +21,6 @@ this software offers following functionalities
 - Detailed view of all customers
 - Detailed view of all orders
 - Accounting statistics
+
+## UML
+![UML of karen](https://github.com/ant0n7/karen/blob/main/Bild_2022-01-30_233128.png)
