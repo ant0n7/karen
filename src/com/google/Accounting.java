@@ -1,5 +1,6 @@
 package com.google;
 
+import java.io.Serializable;
 import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.util.HashMap;
@@ -9,30 +10,21 @@ import java.util.Map;
  * @author anton
  * @since 30.01.2022, So.
  **/
-public class Accounting {
-    private DatabaseController db;
-
+public class Accounting implements Serializable {
     private HashMap<Integer, Transaction> transactions;
     private Map<Integer, Customer> customers;
     private Map<Integer, Order> orders;
 
-    private Map<Integer, Integer> transactionOrderMap;
-    private Map<Integer, Integer> orderCustomerMap;
-
-    public Accounting(HashMap<Integer, Transaction> transactions, Map<Integer, Customer> customers, Map<Integer, Order> orders, Map<Integer, Integer> transactionOrderMap, Map<Integer, Integer> orderCustomerMap) {
+    public Accounting(HashMap<Integer, Transaction> transactions, Map<Integer, Customer> customers, Map<Integer, Order> orders) {
         this.transactions = transactions;
         this.customers = customers;
         this.orders = orders;
-        this.transactionOrderMap = transactionOrderMap;
-        this.orderCustomerMap = orderCustomerMap;
     }
 
     public Accounting() {
         this.transactions           = new HashMap<>();
         this.customers              = new HashMap<>();
         this.orders                 = new HashMap<>();
-        this.transactionOrderMap    = new HashMap<>();
-        this.orderCustomerMap       = new HashMap<>();
     }
 
     // Getters & Setters
@@ -61,22 +53,6 @@ public class Accounting {
         this.orders = orders;
     }
 
-    public Map<Integer, Integer> getTransactionOrderMap() {
-        return transactionOrderMap;
-    }
-
-    public void setTransactionOrderMap(Map<Integer, Integer> transactionOrderMap) {
-        this.transactionOrderMap = transactionOrderMap;
-    }
-
-    public Map<Integer, Integer> getOrderCustomerMap() {
-        return orderCustomerMap;
-    }
-
-    public void setOrderCustomerMap(Map<Integer, Integer> orderCustomerMap) {
-        this.orderCustomerMap = orderCustomerMap;
-    }
-
     // Functional methods
 
     public void startCLI() {
@@ -86,6 +62,8 @@ public class Accounting {
             userChoice = IO.printMainMenu(this);
 
             switch (userChoice) {
+                case 0:
+                    break;
                 case 1:
                     addTransaction();
                     break;
@@ -108,7 +86,7 @@ public class Accounting {
     //                startStatisticsCLI();
                     break;
                 default:
-                    System.out.println("error");
+                    System.out.println("Error");
                     break;
             }
             Utils.promptEnterKey();

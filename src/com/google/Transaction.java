@@ -1,12 +1,13 @@
 package com.google;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 /**
  * @author anton
  * @since 30.01.2022, So.
  **/
-public class Transaction {
+public class Transaction implements Serializable {
     private int transactionID;
     private double amount;
     private Currency currency;

@@ -1,10 +1,12 @@
 package com.google;
 
+import java.io.Serializable;
+
 /**
  * @author anton
  * @since 30.01.2022, So.
  **/
-public class Order {
+public class Order implements Serializable {
     private int orderID;
     private String name;
     private String description;
