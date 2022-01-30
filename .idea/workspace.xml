@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f65d5c15-ee7d-4baa-acce-c9af97b6f514" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/google/Accounting.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/google/Accounting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/google/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/google/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/google/IO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/google/IO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/google/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/google/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/google/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/google/Order.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/untitled104/com/google/Transaction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled104/com/google/Transaction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/google/Accounting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/google/Accounting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/google/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/google/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/google/IO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/google/IO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/google/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/google/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/google/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/google/Transaction.java" afterDir="false" />
-    </list>
+    <list default="true" id="f65d5c15-ee7d-4baa-acce-c9af97b6f514" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +104,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.31191224" />
     <property name="project.structure.side.proportion" value="0.27598897" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
@@ -148,7 +135,7 @@
       <updated>1643474937955</updated>
       <workItem from="1643474948112" duration="2445000" />
       <workItem from="1643530394661" duration="11964000" />
-      <workItem from="1643555896026" duration="10374000" />
+      <workItem from="1643555896026" duration="10748000" />
     </task>
     <servers />
   </component>
