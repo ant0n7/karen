@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f65d5c15-ee7d-4baa-acce-c9af97b6f514" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Utils.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/project-template.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/google/Accounting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/google/Currency.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/google/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/google/DatabaseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/google/IO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/google/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/google/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/untitled104.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_dlsc_formsfx_formsfx_core_11_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_controlsfx_controlsfx_11_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kordamp_bootstrapfx_bootstrapfx_core_0_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kordamp_ikonli_ikonli_core_12_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_kordamp_ikonli_ikonli_javafx_12_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_15_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_15_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_15_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_15_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_15_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_15_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_15_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_15_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/karen.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/google/karen/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/google/karen/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/google/karen/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/google/karen/HelloApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/google/karen/HelloController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/google/karen/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="24NdMvMV4QoNqR7j6ORxe2bWvKm" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled104" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.27598897" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.google.Main" />
+      <module name="untitled104" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f65d5c15-ee7d-4baa-acce-c9af97b6f514" name="Changes" comment="" />
+      <created>1643474937955</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1643474937955</updated>
+      <workItem from="1643474948112" duration="2445000" />
+      <workItem from="1643530394661" duration="11964000" />
+      <workItem from="1643555896026" duration="5931000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
