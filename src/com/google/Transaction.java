@@ -56,12 +56,12 @@ public class Transaction {
         this.purpose = purpose;
     }
 
-    public Order getOrder() {
-        return order;
+    public int getIDOrder() {
+        return IDOrder;
     }
 
-    public void setOrder(Order order) {
-        this.order = order;
+    public void setIDOrder(int IDOrder) {
+        this.IDOrder = IDOrder;
     }
 
     public LocalDate getDate() {

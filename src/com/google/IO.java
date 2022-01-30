@@ -36,7 +36,7 @@ public class IO {
         return Utils.scanRangedInt(0, 8, MENU_INPUT_STRING);
     }
 
-    public static Transaction transactionWizardCLI(Accounting accounting) {
+    public static Transaction transactionWizardCLI(Accounting accounting, int transactionID) {
         Output.printBox("NEW TRANSACTION");
         double amount = Utils.scanRangedDouble(-999999999, 999999999, "Amount of money: ");
 
@@ -68,7 +68,21 @@ public class IO {
         int day = Utils.scanRangedInt(LocalDate.MIN.getDayOfMonth(), LocalDate.MAX.getDayOfMonth(), "Day: ");
         LocalDate date = LocalDate.of(year, month, day);
 
-        return new Transaction(0, amount, currency, purpose, IDOrder, date);
+        return new Transaction(transactionID, amount, currency, purpose, IDOrder, date);
+    }
+
+    public static Customer customerWizardCLI(Accounting accounting, int customerID) {
+        Output.printBox("NEW CUSTOMER");
+
+        String name = Utils.scanString("Name: ");
+        String street = Utils.scanString("Street: ");
+        int houseNumber = Utils.scanRangedInt(1, 999999, "House Number: ");
+        String zip = Utils.scanString("ZIP: ");
+        String city = Utils.scanString("City: ");
+        String country = Utils.scanString("Country: ");
+        String personOfContact = Utils.scanString("Person of contact: ");
+
+        return new Customer(customerID, name, street, houseNumber, zip, city, country, personOfContact);
     }
 
     public static String[] getEnumNames(Class<? extends Enum<?>> e) {

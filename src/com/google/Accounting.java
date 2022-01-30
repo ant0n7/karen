@@ -1,5 +1,7 @@
 package com.google;
 
+import java.sql.SQLOutput;
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -87,10 +89,10 @@ public class Accounting {
                 addTransaction();
                 break;
             case 2:
-//                addOrder();
+                addCustomer();
                 break;
             case 3:
-//                addCustomer();
+//                addOrder();
                 break;
             case 4:
 //                startTransactionCLI();
@@ -111,20 +113,26 @@ public class Accounting {
     }
 
     private void addTransaction() {
-        System.out.println("Adding transaction");
+        System.out.println("Adding transaction...");
 
-        /*
-        transactions.put(0, new Transaction());
-        transactions.put(1, new Transaction());
-        transactions.put(2, new Transaction());
-        transactions.put(3, new Transaction());
-        transactions.put(6, new Transaction());
-        transactions.put(7, new Transaction());
-        */
-
-        Transaction t = IO.transactionWizardCLI(this);
         int newID = (int) transactions.keySet().toArray()[transactions.size() - 1] + 1;
-        System.out.println(newID);
+        Transaction t = IO.transactionWizardCLI(this, newID);
+        transactions.put(newID, t);
+    }
 
+    private void addCustomer() {
+        System.out.println("Adding customer...");
+        int newID = (int) customers.keySet().toArray()[customers.size() - 1] + 1;
+        Customer c = IO.customerWizardCLI(this, newID);
+        customers.put(newID, c);
+    }
+
+    public void testData() {
+        transactions.put(1, new Transaction(1, 500, Currency.CHF, "Test data purpose", 0, LocalDate.ofYearDay(2020, 130)));
+        transactions.put(2, new Transaction(2, 2400, Currency.CHF, "Test data purpose", 0, LocalDate.ofYearDay(2021, 199)));
+        transactions.put(3, new Transaction(3, 5500, Currency.CHF, "Test data purpose", 0, LocalDate.ofYearDay(2021, 345)));
+        transactions.put(4, new Transaction(4, -3000, Currency.EUR, "Test data purpose Minus", 0, LocalDate.ofYearDay(2020, 297)));
+        transactions.put(5, new Transaction(5, 9200, Currency.USD, "Test data purpose", 0, LocalDate.ofYearDay(2022, 2)));
+        transactions.put(6, new Transaction(6, 17500, Currency.CHF, "Test data purpose", 0, LocalDate.ofYearDay(2022, 24)));
     }
 }
