@@ -8,11 +8,13 @@ public class Order {
     private int orderID;
     private String name;
     private String description;
+    private int IDCustomer;
 
-    // DELETE: TEMPORARY CONSTRUCTOR
-    public Order(int orderID, String name) {
+    public Order(int orderID, String name, String description, int IDCustomer) {
         this.orderID = orderID;
         this.name = name;
+        this.description = description;
+        this.IDCustomer = IDCustomer;
     }
 
     public int getOrderID() {

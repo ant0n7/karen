@@ -92,7 +92,7 @@ public class Accounting {
                 addCustomer();
                 break;
             case 3:
-//                addOrder();
+                addOrder();
                 break;
             case 4:
 //                startTransactionCLI();
@@ -122,17 +122,35 @@ public class Accounting {
 
     private void addCustomer() {
         System.out.println("Adding customer...");
+
         int newID = (int) customers.keySet().toArray()[customers.size() - 1] + 1;
         Customer c = IO.customerWizardCLI(this, newID);
         customers.put(newID, c);
     }
 
+    private void addOrder() {
+        System.out.println("Adding order...");
+
+        int newID = (int) orders.keySet().toArray()[orders.size() - 1] + 1;
+        Order o = IO.orderWizardCLI(this, newID);
+        orders.put(newID, o);
+    }
+
     public void testData() {
-        transactions.put(1, new Transaction(1, 500, Currency.CHF, "Test data purpose", 0, LocalDate.ofYearDay(2020, 130)));
-        transactions.put(2, new Transaction(2, 2400, Currency.CHF, "Test data purpose", 0, LocalDate.ofYearDay(2021, 199)));
-        transactions.put(3, new Transaction(3, 5500, Currency.CHF, "Test data purpose", 0, LocalDate.ofYearDay(2021, 345)));
-        transactions.put(4, new Transaction(4, -3000, Currency.EUR, "Test data purpose Minus", 0, LocalDate.ofYearDay(2020, 297)));
-        transactions.put(5, new Transaction(5, 9200, Currency.USD, "Test data purpose", 0, LocalDate.ofYearDay(2022, 2)));
-        transactions.put(6, new Transaction(6, 17500, Currency.CHF, "Test data purpose", 0, LocalDate.ofYearDay(2022, 24)));
+        customers.put(1, new Customer(1, "Google", "Coolstreet", 123, "CH-8032", "Zurich", "Switzerland", "Sundar Pichai"));
+        customers.put(2, new Customer(2, "New Media GmbH", "Dorfstrasse", 7, "DE-79994", "Gelbberg", "Germany", "Max Mustermann"));
+        customers.put(3, new Customer(3, "Apple", "Apple Ave.", 1, "US-29952", "Los Angeles", "USA", "Steve Jobs"));
+
+        orders.put(1, new Order(1, "Website for company", "Create a new website for the company with Wordpress", 2));
+        orders.put(2, new Order(2, "Website for company", "Create a new website for the company with Wordpress", 1));
+        orders.put(3, new Order(3, "SEO for current Website", "Advance the SEO for the company website", 2));
+        orders.put(4, new Order(4, "Website for company", "Create a new website for the company with Wordpress", 3));
+
+        transactions.put(1, new Transaction(1, 500, Currency.CHF, "Business Dinner", 0, LocalDate.ofYearDay(2020, 130)));
+        transactions.put(2, new Transaction(2, 2400, Currency.CHF, "Payment for order", 1, LocalDate.ofYearDay(2021, 199)));
+        transactions.put(3, new Transaction(3, 5500, Currency.CHF, "Second payment for order", 1, LocalDate.ofYearDay(2021, 345)));
+        transactions.put(4, new Transaction(4, -3000, Currency.EUR, "Plugins for order", 1, LocalDate.ofYearDay(2020, 297)));
+        transactions.put(5, new Transaction(5, 9200, Currency.USD, "Payment for order", 3, LocalDate.ofYearDay(2022, 2)));
+        transactions.put(6, new Transaction(6, 17500, Currency.CHF, "Payment for website", 4, LocalDate.ofYearDay(2022, 24)));
     }
 }

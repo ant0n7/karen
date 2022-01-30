@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f65d5c15-ee7d-4baa-acce-c9af97b6f514" name="Changes" comment="" />
+    <list default="true" id="f65d5c15-ee7d-4baa-acce-c9af97b6f514" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Utils.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/google/OrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/google/OrderType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/google/Accounting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/google/Accounting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/google/IO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/google/IO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/google/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/google/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled104.iml" beforeDir="false" afterPath="$PROJECT_DIR$/untitled104.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -108,6 +117,11 @@
     <property name="project.structure.side.proportion" value="0.27598897" />
     <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.google" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="com.google.Main" />
@@ -135,7 +149,7 @@
       <updated>1643474937955</updated>
       <workItem from="1643474948112" duration="2445000" />
       <workItem from="1643530394661" duration="11964000" />
-      <workItem from="1643555896026" duration="10748000" />
+      <workItem from="1643555896026" duration="13562000" />
     </task>
     <servers />
   </component>

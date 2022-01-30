@@ -85,6 +85,21 @@ public class IO {
         return new Customer(customerID, name, street, houseNumber, zip, city, country, personOfContact);
     }
 
+    public static Order orderWizardCLI(Accounting accounting, int orderID) {
+        Output.printBox("NEW ORDER");
+
+        String name = Utils.scanString("Name: ");
+        String description = Utils.scanString("Description: ");
+
+        printAllCustomers(accounting);
+        int IDCustomer;
+        do {
+            IDCustomer = Utils.scanRangedInt(0, 99999999, "Connected Customer ID (None=0): ");
+        } while (!accounting.getCustomers().containsKey(IDCustomer) && 0 != IDCustomer);
+
+        return new Order(orderID, name, description, IDCustomer);
+    }
+
     public static String[] getEnumNames(Class<? extends Enum<?>> e) {
         return Arrays.stream(e.getEnumConstants()).map(Enum::name).toArray(String[]::new);
     }
