@@ -24,3 +24,6 @@ this software offers following functionalities
 
 ## UML
 ![UML of karen](https://github.com/ant0n7/karen/blob/main/Bild_2022-01-30_233128.png)
+
+## Sequence Diagram
+![Sequence Diagram for addTransactionmethod](https://github.com/ant0n7/karen/blob/main/addTransactionSequence.png)
