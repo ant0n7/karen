@@ -24,10 +24,15 @@ public class IO {
                 "2 - Add Customer",
                 "3 - Add Order",
                 "          ",
-                "5 - Transactions...",
-                "6 - Orders...",
-                "7 - Customers...",
-                "8 - Statistics...",
+                "4 - All Transactions",
+                "5 - All Customers",
+                "6 - All Orders",
+                "          ",
+                "7 - Delete Transaction",
+                "8 - Delete Customer",
+                "9 - Delete Order",
+                "          ",
+                "10 - Statistics...",
                 "          ",
                 "0 - Quit"
         };
@@ -47,7 +52,6 @@ public class IO {
             String currencyString = Utils.scanAlphabeticString("Currency: ");
             if (stringInArray(getEnumNames(Currency.class), currencyString)) {
                 currency = Currency.valueOf(currencyString);
-                System.out.println(currency.name());
                 break;
             }
         }
@@ -63,9 +67,9 @@ public class IO {
 
         // Date of transaction
         System.out.println("Transaction Date");
-        int year = Utils.scanRangedInt(LocalDate.MIN.getYear(), LocalDate.MAX.getYear(), "Year: ");
-        int month = Utils.scanRangedInt(LocalDate.MIN.getMonthValue(), LocalDate.MAX.getMonthValue(), "Month: ");
-        int day = Utils.scanRangedInt(LocalDate.MIN.getDayOfMonth(), LocalDate.MAX.getDayOfMonth(), "Day: ");
+        int year = Utils.scanRangedInt(LocalDate.MIN.getYear(), LocalDate.MAX.getYear(), "\tYear: ");
+        int month = Utils.scanRangedInt(LocalDate.MIN.getMonthValue(), LocalDate.MAX.getMonthValue(), "\tMonth: ");
+        int day = Utils.scanRangedInt(LocalDate.MIN.getDayOfMonth(), LocalDate.MAX.getDayOfMonth(), "\tDay: ");
         LocalDate date = LocalDate.of(year, month, day);
 
         return new Transaction(transactionID, amount, currency, purpose, IDOrder, date);
@@ -130,11 +134,11 @@ public class IO {
         return check;
     }
     
-    public static void printAllCustomers(Accounting accounting) {
+    public static void printAllCustomers(Accounting a) {
         System.out.println("All Customers");
         for (int id :
-                accounting.getCustomers().keySet()) {
-            printCustomer(accounting.getCustomers().get(id));
+                a.getCustomers().keySet()) {
+            printCustomer(a.getCustomers().get(id));
         }
     }
 
@@ -142,15 +146,86 @@ public class IO {
         Output.printBox(c.getName() + " (ID=" + c.getCustomerID() + ")");
     }
 
-    public static void printAllOrders(Accounting accounting) {
+    public static void printAllCustomersDetailed(Accounting a) {
+        Output.printBox("ALL CUSTOMERS");
+        for (int id :
+                a.getCustomers().keySet()) {
+            printCustomerDetailed(a.getCustomers().get(id));
+        }
+    }
+
+    public static void printCustomerDetailed(Customer c) {
+        System.out.print("\n");
+        Output.printBox(c.getName());
+        System.out.println("ID          " + c.getCustomerID());
+        System.out.println("ADDRESS     " + c.getStreet() + " " + c.getHouseNumber());
+        System.out.println("ZIP         " + c.getZip());
+        System.out.println("CITY        " + c.getCity());
+        System.out.println("COUNTRY     " + c.getCountry());
+        System.out.println("POC         " + c.getPersonOfContact());
+        System.out.print("\n");
+    }
+
+    public static void printAllOrders(Accounting a) {
         System.out.println("All Orders");
         for (int id :
-                accounting.getOrders().keySet()) {
-            printOrder(accounting.getOrders().get(id));
+                a.getOrders().keySet()) {
+            printOrder(a.getOrders().get(id));
+        }
+    }
+
+    public static void printAllOrdersDetailed(Accounting a) {
+        Output.printBox("ALL ORDERS");
+        for (int id :
+                a.getOrders().keySet()) {
+            printOrderDetailed(a, a.getOrders().get(id));
         }
     }
 
     public static void printOrder(Order o) {
         Output.printBox(o.getName() + " (ID=" + o.getOrderID() + ")");
     }
+
+    public static void printOrderDetailed(Accounting a, Order o) {
+        System.out.print("\n");
+        Output.printBox(o.getName());
+
+        Customer c = a.getCustomers().get(o.getIDCustomer());
+
+        System.out.println("\tID            " + o.getOrderID());
+        System.out.println("\tNAME          " + o.getName());
+        System.out.println("\tDESCRIPTION   " + o.getDescription());
+        System.out.println("\tCUSTOMER      " + c.getName());
+        System.out.print("\n");
+    }
+
+    public static void printAllTransactionsDetailed(Accounting a) {
+        Output.printBox("TRANSACTIONS");
+
+        for (int id :
+             a.getTransactions().keySet()) {
+            printTransactionDetailed(a, a.getTransactions().get(id));
+        }
+        System.out.print("\n");
+    }
+
+    public static void printTransactionDetailed(Accounting a, Transaction t) {
+        String color = t.getAmount() >= 0 ? Color.GREEN_BOLD_BRIGHT : Color.RED_BOLD_BRIGHT;
+        System.out.print("\n" + color);
+        Output.printBox(t.getCurrency().toString() + " " + String.format("%.2f", t.getAmount()));
+        System.out.print(Color.RESET);
+
+        Order o = a.getOrders().get(t.getIDOrder());
+        Customer c = a.getCustomers().get(o.getIDCustomer());
+
+        System.out.println("\tID        " + t.getTransactionID());
+        System.out.println("\tDATE      " + t.getDate().getYear() + "-" + t.getDate().getMonthValue() + "-" + t.getDate().getDayOfMonth());
+        System.out.println("\tCURRENCY  " + t.getCurrency().toString());
+        System.out.println("\tPURPOSE   " + t.getPurpose());
+        System.out.println("\tORDER     " + o.getName());
+        System.out.println("\tCUSTOMER  " + c.getName());
+        System.out.print("\n");
+    }
+
+
 }

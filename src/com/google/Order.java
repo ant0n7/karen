@@ -40,4 +40,12 @@ public class Order {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public int getIDCustomer() {
+        return IDCustomer;
+    }
+
+    public void setIDCustomer(int IDCustomer) {
+        this.IDCustomer = IDCustomer;
+    }
 }

@@ -81,35 +81,38 @@ public class Accounting {
 
     public void startCLI() {
         int userChoice;
-        IO.printStatistics(this);
-        userChoice = IO.printMainMenu(this);
+        do {
+            IO.printStatistics(this);
+            userChoice = IO.printMainMenu(this);
 
-        switch (userChoice) {
-            case 1:
-                addTransaction();
-                break;
-            case 2:
-                addCustomer();
-                break;
-            case 3:
-                addOrder();
-                break;
-            case 4:
-//                startTransactionCLI();
-                break;
-            case 5:
-//                startOrderCLI();
-                break;
-            case 6:
-//                startCustomerCLI();
-                break;
-            case 7:
-//                startStatisticsCLI();
-                break;
-            default:
-                System.out.println("error");
-                break;
-        }
+            switch (userChoice) {
+                case 1:
+                    addTransaction();
+                    break;
+                case 2:
+                    addCustomer();
+                    break;
+                case 3:
+                    addOrder();
+                    break;
+                case 4:
+                    IO.printAllTransactionsDetailed(this);
+                    break;
+                case 5:
+                    IO.printAllCustomersDetailed(this);
+                    break;
+                case 6:
+                    IO.printAllOrdersDetailed(this);
+                    break;
+                case 7:
+    //                startStatisticsCLI();
+                    break;
+                default:
+                    System.out.println("error");
+                    break;
+            }
+            Utils.promptEnterKey();
+        } while (0 != userChoice);
     }
 
     private void addTransaction() {
@@ -137,10 +140,12 @@ public class Accounting {
     }
 
     public void testData() {
+        customers.put(0, new Customer(0, "Misc", "Misc", 0, "Misc", "Misc", "Misc", "Misc"));
         customers.put(1, new Customer(1, "Google", "Coolstreet", 123, "CH-8032", "Zurich", "Switzerland", "Sundar Pichai"));
         customers.put(2, new Customer(2, "New Media GmbH", "Dorfstrasse", 7, "DE-79994", "Gelbberg", "Germany", "Max Mustermann"));
         customers.put(3, new Customer(3, "Apple", "Apple Ave.", 1, "US-29952", "Los Angeles", "USA", "Steve Jobs"));
 
+        orders.put(0, new Order(0, "Misc", "Order object for misc. transactions", 0));
         orders.put(1, new Order(1, "Website for company", "Create a new website for the company with Wordpress", 2));
         orders.put(2, new Order(2, "Website for company", "Create a new website for the company with Wordpress", 1));
         orders.put(3, new Order(3, "SEO for current Website", "Advance the SEO for the company website", 2));
