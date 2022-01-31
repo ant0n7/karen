@@ -8,10 +8,12 @@ The idea of this software is that any user can easily do their accounting. There
 covering every desire that people have, thinking of an accounting software. It should be easy to use, accessible for
 everyone and free.
 
-the idea of how the classes for the implementation could look is what we tried to draw on the following picture.
+The idea of how the classes for the implementation could look is what we tried to draw on the following picture.
 
 ![UML of karen at the beginning](https://github.com/ant0n7/karen/blob/main/umlstart.png)
 
+### Why inheritance was not used
+Planned was an implementation resembling the last sketch. In this idea the class Entity is either the receiver or the sender of a transaction. In the planning process we decided to remove that whole inheritance tree and not link every transaction to a customer. Transactions can be linked to an order. Every order is linked to a customer. The would be a massive redundancy if every transaction was linked to a customer separately while it's already linked through the order.  
 
 ## Functionalities
 this software offers following functionalities
