@@ -36,6 +36,32 @@ this software offers following functionalities
 - Detailed view of all orders
 - Accounting statistics
 
+### CLI
+#### Adding a transaction
+![AddTransactionCLI](https://github.com/ant0n7/karen/blob/main/addtransactionCLI.png)
+
+#### Adding a customer
+![AddTransactionCLI](https://github.com/ant0n7/karen/blob/main/addCustomerCLI.png)
+
+#### Adding a order
+![AddTransactionCLI](https://github.com/ant0n7/karen/blob/main/addOrderCLI.png)
+
+#### List of all orders
+![AddTransactionCLI](https://github.com/ant0n7/karen/blob/main/allOrders.png)
+
+#### List of all customers
+![AddTransactionCLI](https://github.com/ant0n7/karen/blob/main/allcustomerOverview.png)
+
+#### Menu CLI
+![AddTransactionCLI](https://github.com/ant0n7/karen/blob/main/menuCLI.png)
+
+#### transaction overview
+![AddTransactionCLI](https://github.com/ant0n7/karen/blob/main/transactionOverview.png)
+
+#### stats
+![AddTransactionCLI](https://github.com/ant0n7/karen/blob/main/stats.png)
+
+
 ### UML
 ![UML of karen](https://github.com/ant0n7/karen/blob/main/Bild_2022-01-30_233128.png)
 
