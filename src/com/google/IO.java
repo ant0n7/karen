@@ -28,12 +28,6 @@ public class IO {
                 "5 - All Customers",
                 "6 - All Orders",
                 "          ",
-                "7 - Delete Transaction",
-                "8 - Delete Customer",
-                "9 - Delete Order",
-                "          ",
-                "10 - Statistics...",
-                "          ",
                 "0 - Quit"
         };
         Output.printMenu(Output.MAIN_MENU, "ACCOUNTING MENU", menuOptions);
@@ -226,6 +220,4 @@ public class IO {
         System.out.println("\tCUSTOMER  " + c.getName());
         System.out.print("\n");
     }
-
-
 }

@@ -82,9 +82,6 @@ public class Accounting implements Serializable {
                 case 6:
                     IO.printAllOrdersDetailed(this);
                     break;
-                case 7:
-    //                startStatisticsCLI();
-                    break;
                 default:
                     System.out.println("Error");
                     break;
