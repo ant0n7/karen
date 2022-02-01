@@ -3,6 +3,9 @@ package com.google;
 import java.time.LocalDate;
 import java.time.Year;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.TreeMap;
 
 /**
  * @author anton
@@ -27,6 +30,8 @@ public class IO {
                 "4 - All Transactions",
                 "5 - All Customers",
                 "6 - All Orders",
+                "          ",
+                "7 - Statistics...",
                 "          ",
                 "0 - Quit"
         };
@@ -219,5 +224,17 @@ public class IO {
         System.out.println("\tORDER     " + o.getName());
         System.out.println("\tCUSTOMER  " + c.getName());
         System.out.print("\n");
+    }
+
+    public static void printDetailedStatistics(LinkedHashMap<String, Double> stats) {
+        Output.printBox("Detailed Statistics");
+        Output.printLine("-");
+        for (String statName :
+                stats.keySet()) {
+            double value = stats.get(statName);
+            String color = value >= 0 ? Color.GREEN_BOLD_BRIGHT : Color.RED_BOLD_BRIGHT;
+            String statString = String.format("\n\t%25s - " + color + "%.2f" + Color.RESET + "\n", statName, value);
+            System.out.print(statString);
+        }
     }
 }

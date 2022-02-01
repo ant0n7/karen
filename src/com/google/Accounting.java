@@ -4,7 +4,9 @@ import java.io.Serializable;
 import java.sql.SQLOutput;
 import java.time.LocalDate;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 /**
  * @author anton
@@ -82,6 +84,10 @@ public class Accounting implements Serializable {
                 case 6:
                     IO.printAllOrdersDetailed(this);
                     break;
+                case 7:
+                    int year = Utils.scanRangedInt(0, LocalDate.now().getYear(), "Starting Year: ");
+                    IO.printDetailedStatistics(generateStatistics(year));
+                    break;
                 default:
                     System.out.println("Error");
                     break;
@@ -112,6 +118,64 @@ public class Accounting implements Serializable {
         int newID = (int) orders.keySet().toArray()[orders.size() - 1] + 1;
         Order o = IO.orderWizardCLI(this, newID);
         orders.put(newID, o);
+    }
+
+    private LinkedHashMap<String, Double> generateStatistics(int startYear) {
+        LinkedHashMap<String, Double> stats = new LinkedHashMap<>();
+        stats.put("Gross Sales", getGrossSales());
+        stats.put("Net Profit", getNetProfit());
+
+        for (int i = startYear; i <= LocalDate.now().getYear(); i++) {
+            stats.put("Gross Sales (" + i + ")", getGrossSalesPerYear(i));
+            stats.put("Net Profit (" + i + ")", getNetProfitPerYear(i));
+        }
+
+        return stats;
+    }
+
+    private double getGrossSales() {
+        double grossSales = 0;
+        for (int id :
+                getTransactions().keySet()) {
+            Transaction t = getTransactions().get(id);
+            if (t.getAmount() >= 0) {
+                grossSales += t.getAmount();
+            }
+        }
+        return grossSales;
+    }
+
+    private double getNetProfit() {
+        double netProfit = 0;
+        for (int id :
+                getTransactions().keySet()) {
+            netProfit += getTransactions().get(id).getAmount();
+        }
+        return netProfit;
+    }
+
+    private double getNetProfitPerYear(int year) {
+        double netProfit = 0;
+        for (int id :
+                getTransactions().keySet()) {
+            Transaction t = getTransactions().get(id);
+            if (year == t.getDate().getYear()) {
+                netProfit += t.getAmount();
+            }
+        }
+        return netProfit;
+    }
+
+    private double getGrossSalesPerYear(int year) {
+        double grossSales = 0;
+        for (int id :
+                getTransactions().keySet()) {
+            Transaction t = getTransactions().get(id);
+            if (year == t.getDate().getYear() && 0 <= t.getAmount()) {
+                grossSales += t.getAmount();
+            }
+        }
+        return grossSales;
     }
 
     public void testData() {
